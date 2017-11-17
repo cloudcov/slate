@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Cloudcov API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -19,7 +19,7 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the Cloudcov API! You can use our API to access Cloudcov API endpoints.
 
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -65,9 +65,9 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Scans
 
-## Get All Kittens
+## Scan Template
 
 ```ruby
 require 'kittn'
@@ -116,11 +116,11 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint executes a scan on an infrastructure as code template.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`POST https://cloudcov.com/scan`
 
 ### Query Parameters
 
@@ -236,4 +236,3 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
-
